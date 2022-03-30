@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "BN6Z2jaNvV7tVLxmio2aCiyuy4D0XeY5Lv/BZl7B2GCr+1mqlglx0XfJhHaGmoC7TsQLR3sSC7E00AN1f3jKiA==",
+  "dgSpecHash": "YDYLsAYtn0aUC+XjGQbbWDIzrEvEsDdh9QMbw+5HnjR+e5P2oh2wdzxQLBNCVPPdp3t2YPGafJCwH7r7AvPYrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jvfo\\Documents\\Pessoal\\simple-api-with-dot-net-cqrs-mediator\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jvfo\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\jvfo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\jvfo\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\jvfo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\jvfo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\jvfo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\jvfo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\jvfo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",

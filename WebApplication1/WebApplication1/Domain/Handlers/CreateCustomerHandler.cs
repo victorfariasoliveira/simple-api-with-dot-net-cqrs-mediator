@@ -1,10 +1,11 @@
-﻿using WebApplication1.Domain.Commands.Requests;
+﻿using MediatR;
+using WebApplication1.Domain.Commands.Requests;
 using WebApplication1.Domain.Commands.Responses;
 using WebApplication1.Domain.Entities;
 
 namespace WebApplication1.Domain.Handlers
 {
-    public class CreateCustomerHandler : ICreateCustomerHandler
+    public class CreateCustomerHandler : IRequestHandler<CreateCustomerRequest, CreateCustomerResponse>
     {
         //ICustomerRepository _repository;
         //IEmailService _emailService;
@@ -15,27 +16,29 @@ namespace WebApplication1.Domain.Handlers
             //_emailService = emailService;
         }
 
-        public CreateCustomerResponse Handle(CreateCustomerRequest command)
+        public Task<CreateCustomerResponse> Handle(CreateCustomerRequest request, CancellationToken cancellationToken)
         {
             // Aplicar Fail Fast Validations
 
             // Cria a entidade
-            var customer = new Customer(command.Name, command.Email);
+            var customer = new Customer(request.Name, request.Email);
 
             // Persiste a entidade no banco
-            //_repository.Save(customer);
+            // _repository.Save(customer);
 
             // Envia E-mail de boas-vindas
-            //_emailService.Send(customer.Name, customer.Email);
+            // _emailService.Send(customer.Name, customer.Email);
 
             // Retorna a resposta
-            return new CreateCustomerResponse
+            var result = new CreateCustomerResponse
             {
                 Id = customer.Id,
                 Name = customer.Name,
                 Email = customer.Email,
                 Date = DateTime.Now
             };
+            return Task.FromResult(result);
         }
+
     }
 }

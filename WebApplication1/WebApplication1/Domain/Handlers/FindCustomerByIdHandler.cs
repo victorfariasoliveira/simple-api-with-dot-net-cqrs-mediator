@@ -1,9 +1,10 @@
-﻿using WebApplication1.Domain.Queries.Requests;
+﻿using MediatR;
+using WebApplication1.Domain.Queries.Requests;
 using WebApplication1.Domain.Queries.Responses;
 
 namespace WebApplication1.Domain.Handlers
 {
-    public class FindCustomerByIdHandler : IFindCustomerByIdHandler
+    public class FindCustomerByIdHandler : IRequestHandler<FindCustomerByIdRequest, FindCustomerByIdResponse>
     {
         // ICustomerRepository _repository;
 
@@ -11,13 +12,15 @@ namespace WebApplication1.Domain.Handlers
         {
             //_repository = repository;
         }
-        public FindCustomerByIdResponse Handle(FindCustomerByIdRequest command)
+
+        public Task<FindCustomerByIdResponse> Handle(FindCustomerByIdRequest request, CancellationToken cancellationToken)
         {
             // TODO: Lógica de leitura se houver
 
             // Retorna o resultado
-            return new FindCustomerByIdResponse { Email = "", Id = Guid.NewGuid(), Name = "" }; 
-            // return _repository.GetCustomerById(command.Id);
+            var result = new FindCustomerByIdResponse { Email = "", Id = Guid.NewGuid(), Name = "" };
+            // var result = _repository.GetCustomerById(request.Id);
+            return Task.FromResult(result);
         }
     }
 }
